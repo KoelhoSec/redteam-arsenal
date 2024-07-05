@@ -29,8 +29,10 @@ Most of the stuff here is far from fancy or the best solution possible, sorry :(
 * amsi\_patching\_go.go: Patch AMSI in a given PID (go). 
 	* `.\amsi_patching_go.exe <PID>`
 * amsipythonbypass.zip: AMSI patching implemented in Python. Extracted from FluidAttacks [post](https://fluidattacks.com/blog/amsi-bypass-python/).
-* add\_user\_dll.cpp / adduser.dll: DLL that adds a new local admin user when loaded. Dynamically look up for local Administrators group name and add the user using windows APIs to avoid using net.exe/net1.exe. Compilation in Linux --> i686-w64-mingw32-gcc -shared -o adduser.dll add\_user\_dll.cpp
-* add\_user\_dll2.cpp: DLL that adds a new local admin user when loaded (via system(net.exe...) method). Compilation in Linux --> i686-w64-mingw32-gcc -shared -o adduser2.dll add\_user\_dll2.cpp
+* add\_user\_dll.cpp / adduser.dll: DLL that adds a new local admin user when loaded. Dynamically look up for local Administrators group name and add the user using windows APIs to avoid using net.exe/net1.exe.
+	* Compilation in Linux --> `i686-w64-mingw32-gcc -shared -o adduser.dll add\_user\_dll.cpp`
+* add\_user\_dll2.cpp: DLL that adds a new local admin user when loaded (via system(net.exe...) method).
+	* Compilation in Linux --> `i686-w64-mingw32-gcc -shared -o adduser2.dll add\_user\_dll2.cpp`
 * Invoke-Mimikatz.ps1: Powershell mimikatz with some minor bug fixes.
 * SpoolSample.exe: SpoolSample precompiled binary (printerbug).
 * bin\_to\_uuids.py: .bin to uuids converter, useful for UUID injection.
