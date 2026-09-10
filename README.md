@@ -89,4 +89,5 @@ Most of the stuff here is far from fancy or the best solution possible, sorry :(
 * reverse\_shell.sh: A simple revshell in sh... old content, you may want to use https://www.revshells.com/.
 * systracing_cve-2020-0668.txt: Steps to reproduce CVE-2020-0668.
 * webshell.aspx: ASP.NET webshell. A defined "AUTHKEY" is required to interact with it (line 8).
+* remote_patch_updated.zip: AMSI patch for updated Windows Defender. ZIP password: amsi
 
