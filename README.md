@@ -12,7 +12,7 @@ Most of the stuff here is far from fancy or the best solution possible, sorry :(
 	*  `.\adduserbyimpersonation.exe addtodomaingroup <token_ID> <username> <domain_group> <server>` to add an existing domain user to a domain group.
 	*  `.\adduserbyimpersonation.exe addtolocalgroup <token_ID> <username> <local_group> <server>` to add an existing local user/domain user to a local group (e.g. builtin "Administrators" group).
 * GetNPUsers.exe: GetNPUsers.py from impacket compiled to .exe via pyinstaller.
-* b_python.exe: BloodHound.py project compiled to .exe via cx\_Freeze. You may want to run this with `--disable-pooling` flag.
+* b_python_signed.exe: BloodHound.py project compiled to .exe via cx\_Freeze and signed with Limelighter. You may want to run this with `--disable-pooling` flag.
 	* `.\b_python.exe -u <username> -p <pass> -d <domain> -dc <dc_fqdn> -gc <dc_fqdn> -ns <dc_ip> -c all --disable-pooling` 
 * generate\_malicious\_lnk.ps1: Malicious .lnk generator (with wordpad.exe icon).
 * cpy.exe: Certipy project compiled to .exe via cx\_Freeze. Bypassing many EDRs.
